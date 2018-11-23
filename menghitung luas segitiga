@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Luas Segitiga</title>
+</head>
+<body>
+	<table>
+		<form action="" method="POST" name="luassegitiga">
+			<tr><td colspan="2"><h3>Menghitung luas segitiga</h3></td></tr>
+			<tr><td>Alas segitiga : </td><td><input type="text" name="alas"></td></tr>
+			<tr><td>Tinggi segitiga:</td><td><input type="text" name="Tinggi"></td></tr>
+			<tr><td><input type="submit" name="input" value="Hitung">			
+		</form>
+	</table>
+</body>
+</html>
+
+<?php
+if(isset($_POST['input'])){
+	$alas=$_POST['alas'];
+	$Tinggi=$_POST['Tinggi'];
+
+	function segitiga($alas,$Tinggi){
+		$hasil=0.5*$alas*$Tinggi;
+		echo "hasil : $hasil";
+		return $hasil;
+	}
+	segitiga($alas,$Tinggi);
+}
+?>
